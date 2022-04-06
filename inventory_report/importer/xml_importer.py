@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 
 
 class report_XML:
-    def xml_data(path):
+    def import_data(path):
         tree = ET.parse('country_data.xml')
         root = tree.getroot()
         product_itens = []
