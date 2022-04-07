@@ -7,4 +7,3 @@ class report_JSON:
             data = file.read()
             item = json.loads(data)
         return item
-    
