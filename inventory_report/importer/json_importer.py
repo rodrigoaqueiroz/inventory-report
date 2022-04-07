@@ -1,9 +1,15 @@
+from inventory_report.importer.importer import Importer
 import json
 
 
-class report_JSON:
+class report_JSON(Importer):
     def import_data(path):
-        with open(path) as file:
-            data = file.read()
-            item = json.loads(data)
-        return item
+        ext = path.split(".")[-1]
+        if ext =="json":
+            with open(path) as file:
+                data = file.read()
+                item = json.loads(data)
+                return item
+        else:
+            raise ValueError("Arquivo inválido")
+            

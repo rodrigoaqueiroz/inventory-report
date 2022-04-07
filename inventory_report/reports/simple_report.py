@@ -4,7 +4,7 @@ from collections import Counter
 
 class SimpleReport:
     @classmethod
-    def generate(clas, report):
+    def generate(cls, report):
         oldest_date = min(
             [product["data_de_fabricacao"] for product in report])
 
