@@ -8,7 +8,7 @@ class report_XML(Importer):
         root = tree.getroot()
         product_itens = []
         ext = path.split(".")[-1]
-        if ext =="xml":
+        if ext == "xml":
             for child in root:
                 item = {}
                 for element in child:
