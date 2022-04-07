@@ -2,7 +2,7 @@ from inventory_report.importer.importer import Importer
 import json
 
 
-class report_JSON(Importer):
+class JsonImporter(Importer):
     def import_data(path):
         ext = path.split(".")[-1]
         if ext == "json":

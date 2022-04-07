@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 from inventory_report.importer.importer import Importer
 
 
-class report_XML(Importer):
+class XmlImporter(Importer):
     def import_data(path):
         tree = ET.parse(path)
         root = tree.getroot()

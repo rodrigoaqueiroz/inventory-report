@@ -2,7 +2,7 @@ from inventory_report.importer.importer import Importer
 import csv
 
 
-class report_CSV(Importer):
+class CsvImporter(Importer):
     def import_data(path):
         product_itens = []
         ext = path.split(".")[-1]
