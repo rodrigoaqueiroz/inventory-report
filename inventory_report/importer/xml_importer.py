@@ -9,7 +9,6 @@ class report_XML:
         for child in root:
             item = {}
             for element in child:
-                # print(element.tag, 'text=', element.text)
                 item[element.tag] = element.text
             product_itens.append(item)
         return product_itens

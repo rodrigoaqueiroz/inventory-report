@@ -6,7 +6,8 @@ from inventory_report.reports.simple_report import SimpleReport
 
 
 class Inventory:
-    def import_data(path, report=""):
+    @staticmethod
+    def get_extension(path):
         products = []
         ext = path.split(".")[-1]
         if ext == "xml":
@@ -15,8 +16,13 @@ class Inventory:
             products = report_JSON.import_data(path)
         if ext == "csv":
             products = report_CSV.import_data(path)
+        return products
+
+    @classmethod
+    def import_data(cls, path, report=""):
+        inventory_report = cls.get_extension(path)
         if report == "simples":
-            report = SimpleReport.generate(products)
+            report = SimpleReport.generate(inventory_report)
         elif report == "completo":
-            report = CompleteReport.generate(products)
+            report = CompleteReport.generate(inventory_report)
         return report
