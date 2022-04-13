@@ -1,4 +1,4 @@
-# Job Insights
+# Inventory Report
 
 ---
 
